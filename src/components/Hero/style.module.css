@@ -58,6 +58,7 @@
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  outline: none;
 }
 
 .input_wrap .searchBtn {

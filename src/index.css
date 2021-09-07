@@ -21,6 +21,10 @@ code {
     monospace;
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
 * {
   padding: 0;
   margin: 0;

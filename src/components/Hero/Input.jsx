@@ -9,9 +9,17 @@ export default function Input({ value }) {
   const dispatch = useDispatch();
   const history = useHistory();
   const inputRef = useRef("");
+  const dropdownRef = useRef("");
 
   const handleSearch = e => {
     e.preventDefault();
+
+    //if user doesn't select any food type then return from the function
+    if (dropdownRef.current.value === "type") {
+      alert("please select a food type");
+      return;
+    }
+
     //send the input value to store
     dispatch(setsearchValue(inputRef.current.value));
     //go to search page
@@ -28,10 +36,10 @@ export default function Input({ value }) {
         required
         maxLength="20"
         placeholder="what are your looking for?"
-        type="text"
+        type="search"
         value={value && value}
       />
-      <select name="type" className={s.food_type}>
+      <select ref={dropdownRef} name="type" className={s.food_type}>
         <option value="type">type</option>
         <option value="all">all</option>
         <option value="burger">burger</option>
