@@ -1,0 +1,88 @@
+.popularFood_section {
+  width: 100%;
+  padding: 0px 20px;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+.popularFood_title {
+  font-size: 1.5rem;
+  font-family: poppins;
+}
+
+.food_list_wrap {
+  margin-top: 2rem;
+}
+
+.food_cart {
+  background-color: #fafafe;
+  width: 95% !important;
+  box-shadow: 13px 10px 13px 0px #ececec;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.food_cart img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.food_cart .food_content {
+  padding: 10px 10px 15px 10px;
+}
+
+.food_cart .food_content h5 {
+  font-size: 1.15rem;
+  font-family: poppins;
+  margin: 0.5rem 0px;
+}
+
+.food_content .food_rating {
+  display: flex;
+  align-items: center;
+}
+
+.food_content .food_rating span {
+  display: inline-flex;
+  color: rgb(255, 174, 0);
+  margin-right: 0.4rem;
+}
+
+.food_content .price_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.price_wrap .price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: poppins;
+}
+
+.price_wrap .add_cart {
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  background-color: var(--secondary_color);
+  cursor: pointer;
+}
+
+.slider_nextBtn {
+  position: absolute;
+  top: -65px;
+  right: 0;
+  background: var(--secondary_color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+}

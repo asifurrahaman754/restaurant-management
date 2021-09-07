@@ -1,0 +1,91 @@
+.hero_bg {
+  width: 100%;
+  background: var(--primary_color);
+  padding: 50px 0px;
+}
+.hero_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  color: black;
+  justify-content: space-between;
+}
+
+.hero_content {
+  max-width: 500px;
+  width: 100%;
+}
+
+.hero_content h2 {
+  font-size: 2.5rem;
+  font-size: clamp(2rem, 3.5vw, 4rem);
+  font-weight: bold;
+}
+
+.hero_content p {
+  margin: 1rem 0px 2rem 0px;
+}
+
+.input_wrap {
+  background: white;
+  padding: 0px 0px 0px 15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0px 0px 10px 5px #e3e3e3;
+}
+
+.input_wrap .searchIcon {
+  font-size: 1.2rem;
+}
+
+.input_wrap input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-left: 1rem;
+  flex: 2;
+}
+
+.input_wrap .food_type {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.input_wrap .searchBtn {
+  padding: 20px 30px;
+  background: black;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.hero_image {
+  max-width: 600px;
+  width: 100%;
+}
+
+.hero_image img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .hero_image {
+    display: none;
+  }
+
+  .hero_container {
+    justify-content: center;
+    text-align: center;
+  }
+}

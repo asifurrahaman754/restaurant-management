@@ -1,0 +1,58 @@
+.login_container {
+  background: #f4f4f4;
+  padding: 60px 10px;
+  display: grid;
+  place-items: center;
+}
+
+.login_container .login_form {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 50px 30px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 5px 4px 15px #e3e3e3;
+}
+
+.login_form .form_title {
+  font-family: poppins;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.login_form input {
+  border: 1px solid #e3e3e3;
+  outline: none;
+  padding: 15px 10px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.login_form .login_submit {
+  background: #fc8868;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: poppins;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.login_form .go_to_signIn {
+  color: #000000bf;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: poppins;
+  margin-top: 0.6rem;
+}
+
+.login_form .go_to_signIn .signIn_btn {
+  color: #f15125;
+  text-decoration: underline;
+  cursor: pointer;
+}

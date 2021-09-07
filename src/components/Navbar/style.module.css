@@ -1,0 +1,101 @@
+.nav_container {
+  background: var(--primary_color);
+  width: 100%;
+}
+
+.nav_stick {
+  position: fixed;
+  top: 0;
+  box-shadow: 0px -9px 17px #b7b7b7;
+  z-index: 999;
+}
+
+.nav_wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav_wrap .logo {
+  width: 70px;
+}
+
+.nav_content {
+  display: flex;
+  align-items: center;
+}
+
+.navlist_wrap {
+  display: none;
+}
+
+.navlist_wrap a {
+  margin-right: 1rem;
+  color: black;
+  transition: all 0.2s;
+}
+
+.navlist_wrap a:hover {
+  color: var(--secondary_color);
+}
+
+.shoping_cart {
+  margin: 0 1rem 0 1rem;
+  position: relative;
+}
+
+.shoping_cart .cartIcon,
+.hamberger_Icon {
+  display: flex;
+  color: black;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.shoping_cart .cart_item_total {
+  position: absolute;
+  bottom: -12px;
+  right: -6px;
+  font-size: 0.7rem;
+  background: black;
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  color: white;
+  border-radius: 50px;
+}
+
+.nav_wrap .nav_signin_btn {
+  font-size: 1rem;
+  border: none;
+  background: var(--secondary_color);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav_signin_btn:hover {
+  background: #e97f62;
+}
+
+.hamberger_Icon {
+  margin-left: 1rem;
+}
+
+@media (min-width: 650px) {
+  .navlist_wrap {
+    display: block;
+  }
+  .hamberger_Icon {
+    display: none;
+  }
+}

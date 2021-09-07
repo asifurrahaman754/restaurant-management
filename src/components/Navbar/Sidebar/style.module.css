@@ -1,0 +1,46 @@
+.sidebar_container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #00000026;
+  z-index: 999;
+}
+
+.sidebar {
+  height: 100%;
+  background: white;
+  position: absolute;
+  right: 0;
+  width: 260px;
+}
+
+.sidebar .close {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.sidebar .navlist_wrap {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navlist_wrap a {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-family: poppins;
+}
+
+@media (min-width: 650px) {
+  .sidebar_container {
+    display: none;
+  }
+}
