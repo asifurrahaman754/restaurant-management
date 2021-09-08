@@ -17,7 +17,6 @@ export default function Sidebar({ isOpen, setisOpen }) {
             <Link to="/about">About us</Link>
             <a href="#">Blogs</a>
             <a href="#">Menu</a>
-            <a href="#">Contact</a>
           </nav>
         </div>
       </div>

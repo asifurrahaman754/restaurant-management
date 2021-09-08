@@ -44,7 +44,7 @@ export default function PopularFood() {
       <div className={s.food_list_wrap}>
         <Slider {...settings}>
           {popularFoodData.map(item => (
-            <FoodListItem item={item} />
+            <FoodListItem key={item.id} item={item} />
           ))}
         </Slider>
       </div>

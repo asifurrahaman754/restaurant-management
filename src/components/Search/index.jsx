@@ -32,7 +32,7 @@ export default function Search() {
 
         <div className={s.foodList_wrap}>
           {popularFoodData.map(item => (
-            <FoodListItem item={item} />
+            <FoodListItem key={item.id} item={item} />
           ))}
         </div>
       </div>
