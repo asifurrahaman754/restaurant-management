@@ -46,6 +46,7 @@ export default function CartItem({ item }) {
             &#43;
           </span>
         </div>
+
         <button onClick={delFromCart} className={s.cartItem_del}>
           delete from cart
         </button>

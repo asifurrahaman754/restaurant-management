@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   searchValue: "",
   cartItem: [],
+  user: { name: "Asifur Rahman" },
 };
 
 export const storeSLice = createSlice({

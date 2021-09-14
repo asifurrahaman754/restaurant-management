@@ -13,10 +13,18 @@ export default function Sidebar({ isOpen, setisOpen }) {
           </span>
 
           <nav className={s.navlist_wrap}>
-            <Link to="/">Home</Link>
-            <Link to="/about">About us</Link>
-            <a href="#">Blogs</a>
-            <a href="#">Menu</a>
+            <Link onClick={() => setisOpen(false)} to="/">
+              Home
+            </Link>
+            <Link onClick={() => setisOpen(false)} to="/about">
+              About us
+            </Link>
+            <Link onClick={() => setisOpen(false)} to="/Blogs">
+              BLogs
+            </Link>
+            <a onClick={() => setisOpen(false)} href="#">
+              Menu
+            </a>
           </nav>
         </div>
       </div>

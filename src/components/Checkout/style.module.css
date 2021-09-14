@@ -1,0 +1,145 @@
+.checkout_container {
+  background-color: #f4f4f4;
+  padding: 80px 10px;
+}
+
+.checkout_wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.delivery_info,
+.order_sum {
+  background-color: white;
+  flex: 1;
+  padding: 25px 20px;
+}
+
+.delivery_info h3,
+.order_sum h3 {
+  font-family: poppins;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.delivery_info .input_group label {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.delivery_info .input_group input,
+.order_sum .voucer input {
+  border: 1px solid #e3e3e3;
+  outline: none;
+  padding: 10px 10px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.delivery_info .input_group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.input_group .regions_wrap,
+.input_group .cities_wrap {
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: -2px 0px 11px 0px #00000024;
+}
+
+.input_group .hide_regions,
+.hide_cities {
+  display: none;
+}
+
+.input_group .regions_wrap li,
+.cities_wrap li {
+  padding: 5px 10px;
+}
+
+.input_group .regions_wrap li:hover,
+.cities_wrap li:hover {
+  background: #efefef;
+}
+
+.input_group .input_outline {
+  border: 1px solid #e3e3e3;
+  padding: 18px 10px;
+  width: 100%;
+  background: #fafafa;
+  cursor: pointer;
+  position: relative;
+}
+
+.input_group .input_outline .label {
+  position: absolute;
+  transform: translate(0%, -50%);
+  font-size: 0.9rem;
+  color: #666;
+  font-size: 14.5px;
+}
+
+.input_group .input_outline .dropdownIcon {
+  position: absolute;
+  right: 10px;
+  transform: translate(0%, -50%);
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+}
+
+.order_sum {
+  height: max-content;
+}
+
+.total_item,
+.shipping,
+.total_price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.total_item span:first-of-type,
+.shipping span:first-of-type,
+.total_price span:first-of-type {
+  color: #565656;
+}
+
+.order_sum .voucer {
+  display: flex;
+  margin: 1rem 0 2rem 0;
+}
+
+.order_sum .voucer .voucer_btn {
+  padding: 10px 25px;
+  border: none;
+  color: white;
+  background-color: var(--secondary_color);
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.order_sum .proceed_btn {
+  border: none;
+  width: 100%;
+  padding: 13px;
+  margin-top: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .checkout_wrap {
+    flex-direction: column;
+  }
+}

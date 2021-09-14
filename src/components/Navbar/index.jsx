@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FiShoppingBag } from "react-icons/fi";
 import { VscMenu } from "react-icons/vsc";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import * as s from "./style.module.css";
@@ -10,7 +10,8 @@ import Sidebar from "./Sidebar";
 export default function Navbar() {
   const [isOpen, setisOpen] = useState(false);
   const [stick, setstick] = useState(false);
-  const cartItem = useSelector(state => state.store.cartItem);
+  const history = useHistory();
+  const { cartItem, user } = useSelector(state => state.store);
 
   //hide the other content outside the viewport whenver the sidebar is open
   useEffect(() => {
@@ -26,6 +27,16 @@ export default function Navbar() {
     });
   }, [isOpen]);
 
+  const goToCart = () => {
+    const user_exists = Object.keys(user).length ? true : false;
+
+    if (user_exists) {
+      history.push("/cart");
+    } else {
+      history.push("/login");
+    }
+  };
+
   return (
     <header className={`${s.nav_container} ${stick && s.nav_stick}`}>
       <div className={s.nav_wrap}>
@@ -38,15 +49,13 @@ export default function Navbar() {
             <Link to="/">Home</Link>
             <Link to="/about">About us</Link>
             <a href="#Menu">Menu</a>
-            <a href="#Blogs">BLogs</a>
+            <Link to="/Blogs">BLogs</Link>
           </nav>
 
           <div className={s.shoping_cart}>
-            <Link to="/cart">
-              <span className={s.cartIcon}>
-                <FiShoppingBag />
-              </span>
-            </Link>
+            <span onClick={goToCart} className={s.cartIcon}>
+              <FiShoppingBag />
+            </span>
 
             {!cartItem.length || (
               <span className={s.cart_item_total}>{cartItem.length}</span>

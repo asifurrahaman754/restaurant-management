@@ -2,7 +2,15 @@ import * as s from "./style.module.css";
 import { blogData } from "../../data";
 import Article from "./Article";
 
-export default function Blog() {
+export default function FeatureBlog() {
+  const items = [];
+  const renderBlogData = () => {
+    for (let i = 0; i < 3; i++) {
+      items.push(<Article item={blogData[i]} />);
+    }
+    return items;
+  };
+
   return (
     <section id="Blogs" className={s.blog_section}>
       <h3 className={s.blog_section_title}>Blog Our Lates News</h3>
@@ -12,11 +20,7 @@ export default function Blog() {
         veniam
       </p>
 
-      <div className={s.blog_container}>
-        {blogData.map(item => (
-          <Article item={item} />
-        ))}
-      </div>
+      <div className={s.blog_container}>{renderBlogData()}</div>
     </section>
   );
 }

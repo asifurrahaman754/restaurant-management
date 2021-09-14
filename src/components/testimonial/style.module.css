@@ -1,0 +1,75 @@
+.testimonial_container {
+  background: #f4f4f4;
+  margin-top: 130px;
+  width: 100%;
+}
+
+.testimonial_wrap {
+  padding: 80px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial_wrap h3,
+.testimonial_wrap .title_quote {
+  font-size: clamp(1rem, 7vw, 2.2rem);
+  font-family: "Poppins";
+  max-width: 500px;
+  font-weight: 600;
+}
+
+.testimonial_card_wrap {
+  margin-top: 2rem;
+}
+
+.testimonial_card {
+  background: white;
+  padding: 20px 20px;
+  box-shadow: 13px 4px 20px #00000012;
+  margin-bottom: 1rem;
+  width: 95% !important;
+  min-height: 230px;
+}
+
+.testimonial_card .card_header img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #343434;
+}
+
+.testimonial_card .card_header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card_header .name {
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+}
+
+/* slider button */
+.slider_nextBtn,
+.slider_prevBtn {
+  position: absolute;
+  top: -80px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #0000009c;
+  transition: all 0.2s;
+}
+
+.slider_nextBtn:hover,
+.slider_prevBtn:hover {
+  color: black;
+}
+
+.slider_nextBtn {
+  right: 0;
+}
+
+.slider_prevBtn {
+  right: 50px;
+}

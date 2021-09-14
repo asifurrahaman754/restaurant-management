@@ -5,7 +5,7 @@ export default function Article({ item }) {
   return (
     <article key={item?.id} className={s.blog_cart}>
       <div className={s.blog_image}>
-        <img src={item.image} alt="blog" />
+        <img loading="lazy" src={item.image} alt="blog" />
       </div>
 
       <div className={s.blog_content}>

@@ -1,21 +1,26 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
 import * as s from "./style.module.css";
 
 export default function Cart() {
-  const cartItem = useSelector(state => state.store.cartItem);
+  const cartItems = useSelector(state => state.store.cartItem);
 
   return (
     <section className={s.cart_container}>
       <div className={s.cartItem_wrap}>
         <h2 className={s.total_cartITem}>
-          {cartItem.length} items in the cart
+          {cartItems.length} items in the cart
         </h2>
-        {cartItem.map(item => (
+        {cartItems.map(item => (
           <CartItem key={item.id} item={item} />
         ))}
 
-        <button className={s.proceedToCheckout}>proceed to checkout</button>
+        {!cartItems.length || (
+          <Link to="/checkout">
+            <button className={s.proceedToCheckout}>proceed to checkout</button>
+          </Link>
+        )}
       </div>
     </section>
   );

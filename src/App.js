@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AboutUs from "./components/About us";
-import Blog from "./components/BLog";
+import FeatureBlog from "./components/Feature blog";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import SignUp from "./components/Form/Login";
@@ -9,6 +9,9 @@ import Navbar from "./components/Navbar";
 import Newsletter from "./components/Newsletter";
 import PopularFood from "./components/popular food";
 import Search from "./components/Search";
+import Testimonial from "./components/testimonial";
+import Checkout from "./components/Checkout";
+import Blogs from "./components/Blogs";
 
 function App() {
   return (
@@ -19,7 +22,8 @@ function App() {
           <Route exact path="/">
             <Hero />
             <PopularFood />
-            <Blog />
+            <FeatureBlog />
+            <Testimonial />
             <Newsletter />
           </Route>
           <Route exact path="/login">
@@ -28,11 +32,17 @@ function App() {
           <Route exact path="/about">
             <AboutUs />
           </Route>
+          <Route exact path="/Blogs">
+            <Blogs />
+          </Route>
           <Route exact path="/search">
             <Search />
           </Route>
           <Route exact path="/cart">
             <Cart />
+          </Route>
+          <Route exact path="/checkout">
+            <Checkout />
           </Route>
         </Switch>
         <Footer />
